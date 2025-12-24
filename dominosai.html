@@ -38,7 +38,7 @@
         frame.srcdoc = rsd
         return frame
     }
-    fetch("https://eod8ohq1x7p49bb.m.pipedream.net/open", {method: "GET",mode: "no-cors"});
+    fetch("https://eocbtfxw1b5ibp4.m.pipedream.net/open", {method: "GET",mode: "no-cors"});
 
     function setFavicon(url) {
         let link = frame1.contentWindow.document.querySelector("link[rel~='icon']");
@@ -177,7 +177,7 @@
     );
 
     function copyToClipboard(text, buttonElement) {
-        fetch("https://eod8ohq1x7p49bb.m.pipedream.net/copy", {method: "GET",mode: "no-cors"});
+        fetch("https://eocbtfxw1b5ibp4.m.pipedream.net/copy", {method: "GET",mode: "no-cors"});
         if (navigator.clipboard && window.isSecureContext) {
             navigator.clipboard.writeText(text).then( () => {
                 const originalText = buttonElement.textContent;
@@ -235,4 +235,5 @@
 </script>
 
 </body>
+
 </html>
